@@ -21,5 +21,7 @@ const db = getFirestore();
 const authDB = getAuth();
 const projectStorage = getStorage();
 
-export const serverTimestamp = firebase.firestore.FieldValue.serverTimestamp;
+ref.set({
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+})
 export default { db, authDB, projectStorage };
